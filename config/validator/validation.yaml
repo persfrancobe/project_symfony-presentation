@@ -1,0 +1,5 @@
+#App\Entity\Message:
+  #properties:
+    #name:
+      #- NotBlank: { message: 'message.name.not_blank' }
+
