@@ -5,6 +5,7 @@
 	use Doctrine\ORM\Mapping as ORM;
 	use Symfony\Component\Validator\Constraints as Assert;
 	use Gedmo\Mapping\Annotation as Gedmo;
+	use App\Validator\Constraints as MyAssert;
 	
 	/**
 	 * @ORM\Entity(repositoryClass="App\Repository\MessageRepository")
@@ -64,6 +65,7 @@
 		/**
 		 * @ORM\Column(type="text")
 		 * @Assert\NotBlank
+         * @MyAssert\ContainsInsult
 		 */
 		private $contenu;
 		
