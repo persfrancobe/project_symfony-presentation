@@ -6,7 +6,7 @@
 	
 	namespace App\Controller;
 	
-	use Irina\Core\GenericController;
+	use ieps\Core\GenericController;
 	use Symfony\Bundle\FrameworkBundle\Controller\AbstractController; //chargement des methodes , comme render()
 	
 	//use Symfony\Component\HttpFoundation\Response; //pour etablir la commande ECHO

@@ -12,7 +12,7 @@
 	use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 	use App\Entity\Post;
 	use App\Form\PostType;
-	use Irina\Core\GenericController;
+    use ieps\Core\GenericController;
 	use Symfony\Component\HttpFoundation\Request;
 	
 	
