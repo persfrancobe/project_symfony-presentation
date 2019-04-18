@@ -1,0 +1,16 @@
+
+{#
+	./templates/posts/index.html.twig
+#}
+
+	<h3>Derniers posts</h3>
+	<ul>
+		{% for post in posts %}
+			<li>
+			<a href="{{ path('app_posts_show', {id: post.id, slug: post.slug}) }}">
+				{{ post.titre }}
+			</a>
+		</li>
+		{% endfor %}
+	</ul>
+

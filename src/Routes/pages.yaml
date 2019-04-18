@@ -1,0 +1,12 @@
+index:
+    path: /
+    controller: App\Controller\PageController::indexAction
+
+show:
+    path: /{id}-{slug}
+    controller: App\Controller\PageController::showAction
+    requirements:
+        id: '[1-9][0-9]*'
+        slug: '[a-z][a-z0-9\-]*'
+    defaults:
+        id: 1

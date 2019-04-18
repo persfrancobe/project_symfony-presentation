@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{% include 'partials/head.html.twig' %}
+</head>
+
+<body>
+<!-- Navigation -->
+{% include 'partials/nav.html.twig' %}
+
+<!-- Page Content -->
+<div class="container">
+  
+  <div class="row">
+    <!-- Blog Entries Column -->
+    <div class="col-md-8">
+		{% block content1 %}{% endblock %}
+    </div>
+    <div class="col-md-4">
+		{{ render(controller('App\\Controller\\ActualiteController::indexAction', { limit: 5 } )) }}
+    </div>
+  </div>
+  <!-- /.row -->
+  
+  <hr>
+
+</div>
+<!-- /.container -->
+
+<!-- Footer -->
+{% include 'partials/footer.html.twig' %}
+
+<!-- SCRIPTS -->
+{% include 'partials/scripts.html.twig' %}
+</body>
+
+</html>

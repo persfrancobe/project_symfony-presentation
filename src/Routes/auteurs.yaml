@@ -1,0 +1,10 @@
+index:
+    path: /
+    controller: App\Controller\AuteursController::indexAction
+
+show:
+    path: /{id}-{slug}
+    controller: App\Controller\AuteurController::showAction
+    requirements:
+        id: '[1-9][0-9]*'
+        slug: '[a-z][a-z0-9\-]*'

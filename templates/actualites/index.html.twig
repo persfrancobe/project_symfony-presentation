@@ -1,0 +1,11 @@
+<h3>Actualités</h3>
+
+<ul class="">
+	{% for actualite in actualites %}
+        <li>
+            <a href="{{ path('app_actualites_show', {'id': actualite.id, 'slug':actualite.slug}) }}">
+                {{ actualite.titre }}
+            </a>
+        </li>
+	{% endfor %}
+</ul>

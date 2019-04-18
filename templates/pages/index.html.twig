@@ -1,0 +1,17 @@
+
+{#
+	./templates/pages/show.html.twig
+	variables:
+		- pages - ARRAY(Page(id,titre, texte, slug, dateCreation))
+#}
+
+
+	<ul class="nav navbar-nav">
+		{% for page in pages %}
+		<li>
+			<a href="{{ path('app_pages_show', {'id': page.id, 'slug':page.slug}) }}">
+				{{ page.titre }}
+			</a>
+		</li>
+		{% endfor %}
+	</ul>

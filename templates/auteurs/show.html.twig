@@ -1,0 +1,29 @@
+
+{#
+	./templates/auteurs/show.html.twig
+	variables: pseudo, biographie, slug; posts
+	
+#}
+{% extends 'base.html.twig' %}
+
+
+{% block title %}{{ auteur.pseudo }}{% endblock %}
+
+{% block content1 %}
+	
+	<h3>Auteur : <b>{{ auteur.pseudo }}</b></h3>
+	<p>{{ auteur.biographie }}</p>
+	
+	<h3>Liste de posts de {{ auteur.pseudo }}</h3>
+	
+	{% include 'posts/liste.html.twig' with {posts: auteur.posts} %}
+	
+	{#
+	PAS BESOIN DE FAIRE RENDER CONTROLLEUR CAR ON A DEJA LISTE DES POSTS DANS $auteur
+	{{ render(controller('App\\Controller\\PostController::indexByAuteur',{
+		'vue' : 'liste',
+		'id' : auteur.id
+	})) }}
+	#}
+	
+{% endblock %}

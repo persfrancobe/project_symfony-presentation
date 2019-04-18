@@ -1,0 +1,13 @@
+{#
+  ./templates/partials/nav.html.twig
+#}
+<nav class="navbar navbar-inverse z-depth-2">
+<div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="{{ path('app_homepage') }}">
+        Mon Super Blog
+      </a>
+    </div>
+    {{ render(controller('App\\Controller\\PageController::indexAction')) }}
+</div>
+</nav>

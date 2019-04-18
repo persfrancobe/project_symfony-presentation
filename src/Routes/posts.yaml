@@ -1,0 +1,42 @@
+# Route 3: App_posts_index
+#   /posts/
+#   > indexAction de PostController
+#   Je suis sur la page index des posts
+index:
+    path: /
+    controller: App\Controller\PostController::index
+
+
+add:
+    path: /add
+    controller: App\Controller\PostController::add
+
+delete:
+    path: /{id}-{slug}/delete
+    controller: App\Controller\PostController::delete
+
+
+
+# Route 2: app_posts_show
+#   /posts/slug
+#    > showAction du PostController
+#   ! définir le slug
+#   Je suis sur la page show du post xxx
+show:
+    path: /{slug}
+    controller: App\Controller\PostController::show
+    requirements:
+        slug: '[a-z][a-z0-9\-]*'
+    defaults:
+        slug: 'ouf-ti'
+
+# Route 4: app_posts_edit
+#   /posts/id-slug/edit
+#    > editAction du PostController
+#    Je suis sur la page edit du post xxx
+edit:
+    path: /{id}-{slug}/edit
+    controller: App\Controller\PostController::edit
+    requirements:
+        id:   '[1-9][0-9]*'
+        slug: '[a-z][a-z0-9\-]*'

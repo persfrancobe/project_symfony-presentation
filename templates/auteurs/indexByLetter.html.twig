@@ -1,0 +1,18 @@
+
+<h3>Liste des auteurs</h3>
+
+{% set letters = 'a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z' | split(',') %}
+<div>
+	{% for letter in letters %}
+		<a href="{{ path('app_pages_show', {'id': 1, 'slug':'editorial', letter: letter}) }}">{{ letter | upper }} </a> |
+	{% endfor %}
+</div>
+<ul>
+	{% for auteur in auteurs %}
+		<li>
+			<a href="{{ path('app_auteurs_show', {'id': auteur.id, 'slug': auteur.slug}) }}">
+				{{ auteur.pseudo }}
+			</a>
+		</li>
+	{% endfor %}
+</ul>

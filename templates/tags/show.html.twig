@@ -1,0 +1,16 @@
+
+{#
+	./templates/tags/show.html.twig
+	variables:
+		- slug
+		
+#}
+{% extends 'base.html.twig' %}
+
+
+{% block title %}Tag <b>{{ tag.nom }}</b>{% endblock %}
+
+{% block content1 %}
+	<h3>{{ tag.nom }}</h3>
+	{% include 'posts/liste.html.twig' with {posts: tag.posts} %}
+{% endblock %}

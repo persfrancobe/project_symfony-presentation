@@ -1,0 +1,15 @@
+
+{#
+	./templates/actualites/show.html.twig
+	variables:
+	
+#}
+{% extends 'base.html.twig' %}
+
+
+{% block title %}{{ actualite.titre }}{% endblock %}
+{% block content1 %}
+	<h3>{{ actualite.titre }}</h3>
+	<p>{{ actualite.texte }}</p>
+	
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Message index{% endblock %}
+
+{% block body %}
+    <h1>Message index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Tel</th>
+                <th>Gsm</th>
+                <th>Objet</th>
+                <th>Slug</th>
+                <th>Contenu</th>
+                <th>Sexe</th>
+                <th>File</th>
+                <th>Path</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for message in messages %}
+            <tr>
+                <td>{{ message.id }}</td>
+                <td>{{ message.name }}</td>
+                <td>{{ message.email }}</td>
+                <td>{{ message.tel }}</td>
+                <td>{{ message.gsm }}</td>
+                <td>{{ message.objet }}</td>
+                <td>{{ message.slug }}</td>
+                <td>{{ message.contenu }}</td>
+                <td>{{ message.sexe }}</td>
+                <td>{{ message.file }}</td>
+                <td>{{ message.path }}</td>
+                <td>
+                    <a href="{{ path('message_show', {'id': message.id}) }}">show</a>
+                    <a href="{{ path('message_edit', {'id': message.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="12">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('message_new') }}">Create new</a>
+{% endblock %}
