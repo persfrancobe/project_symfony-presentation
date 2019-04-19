@@ -68,12 +68,13 @@
          * @MyAssert\ContainsInsult
 		 */
 		private $contenu;
-		
-		/**
-		 * @ORM\Column(type="string", length=255)
-		 *
-		 */
-		private $sexe;
+        const CIVIL = ['Monsieur', 'Madame', 'Mademoiselle'];
+        /**
+         * @ORM\Column(type="string", length=255)
+         * @Assert\Choice(choices=Message::CIVIL, message="Choose a valid civilitie.")
+         */
+        // OU : @Assert\Choice({'Monsieur', 'Madame', 'Mademoiselle'})
+        private $sexe;
 		
 		/**
 		 * @Assert\GreaterThan(

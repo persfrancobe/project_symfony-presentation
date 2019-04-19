@@ -33,19 +33,20 @@ class MessageController extends AbstractController
         $message = new Message();
         $form = $this->createForm(MessageType::class, $message);
         $form->handleRequest($request);
-
         if ($form->isSubmitted() && $form->isValid()) {
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->persist($message);
-            $entityManager->flush();
-
-            return $this->redirectToRoute('message_index');
+            return $this->redirectToRoute('message_ok');
         }
-
         return $this->render('message/new.html.twig', [
             'message' => $message,
             'form' => $form->createView(),
         ]);
+    }
+    /**
+     * @Route("/ok", name="message_ok", methods={"GET"})
+     */
+    public function messageOk()
+    {
+        return $this->render('message/show.html.twig');
     }
 
     /**
