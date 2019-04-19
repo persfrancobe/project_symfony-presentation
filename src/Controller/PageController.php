@@ -4,7 +4,7 @@
 	*/
 namespace App\Controller;
 //use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Ieps\Core\GenericController;
+use Irina\Core\GenericController;
 use App\Entity\Page;
 use App\Entity\Post;
 use Symfony\Component\HttpFoundation\Request;
