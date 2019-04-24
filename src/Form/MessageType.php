@@ -24,7 +24,7 @@ class MessageType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('titre', CheckboxType::class,[
+            ->add('titre', TextType::class,[
                 'attr'=>[
                     'class' => 'custom-control-input',
                     'placeholder' => 'Monsieur ou Madame ou Mademoiselle'

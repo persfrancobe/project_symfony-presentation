@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="RtJVtw3" resname="message.name.not_blank">
+        <source>message.name.not_blank</source>
+        <target>Please enter an messageeeeeeeeeeeeeeeeeeeee name.</target>
+      </trans-unit>
+      <trans-unit id="ubeD1kS" resname="contains_insult_msg">
+        <source>contains_insult_msg</source>
+        <target>the word "{{ string }}" is an insult be respectful please.</target>
+      </trans-unit>
+      <trans-unit id="KpBwNBS" resname="the word &quot;{{ string }}&quot; is an insult be respectful please.">
+        <source>the word "{{ string }}" is an insult be respectful please.</source>
+        <target>Le mot "{{ string }}"est un  insult restez poli svp.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

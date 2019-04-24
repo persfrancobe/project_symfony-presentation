@@ -8,5 +8,5 @@ use Symfony\Component\Validator\Constraint;
 */
 class ContainsInsult extends Constraint
 {
-public $message ='the word "{{ string }}" is an insult be respectful please.' ;
+public $message ='contains_insult_msg' ;
 }

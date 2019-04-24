@@ -1,1 +1,2 @@
 message.name.not_blank: Please enter an messageeeeeeeeeeeeeeeeeeeee name.
+'contains_insult_msg' : 'the word "{{ string }}" is an insult be respectful please.'

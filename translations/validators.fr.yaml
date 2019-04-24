@@ -1,1 +1,2 @@
 Please enter an message name. : entrez un message SVP.
+'contains_insult_msg' : 'Le mot "{{ string }}"est un  insult restez poli svp.'

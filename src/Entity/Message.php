@@ -36,7 +36,7 @@ class Message
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\Regex(pattern = "/^((\+|00)32\s?|0)(\d\s?\d{3}|\d{2}\s?\d{2})(\s?\d{2}){2}$/")
+     * @Assert\Regex(pattern = "/^((\+|00)32\s?|0)(\d\s?\d{3}|\d{2}\s?\d{2})(\s?\d{2}){2}$/",message="format is not correct")
      */
     private $tel;
 
