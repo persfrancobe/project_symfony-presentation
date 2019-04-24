@@ -8,7 +8,7 @@ use Symfony\Component\Validator\Exception\UnexpectedValueException;
 
 class ContainsInsultValidator extends ConstraintValidator
 {
-    private $insults=['merde','putin'];
+    const INSULTS=['merde','putin'];
     public function validate($value, Constraint $constraint)
     {
         if (!$constraint instanceof ContainsInsult) {
@@ -30,7 +30,7 @@ class ContainsInsultValidator extends ConstraintValidator
         }
         $valArray=explode(' ',$value);
         foreach ($valArray as $word ) {
-            if (in_array(strtolower($word),$this->insults )) {
+            if (in_array(strtolower($word),self::INSULTS )) {
                 $this->context->buildViolation($constraint->message)
                     ->setParameter('{{ string }}', $value)
                     ->addViolation();

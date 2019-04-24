@@ -25,10 +25,10 @@ class MessageRepository extends ServiceEntityRepository
     /*
     public function findByExampleField($value)
     {
-        return $this->createQueryBuilder('m')
-            ->andWhere('m.exampleField = :val')
+        return $this->createQueryBuilder('n')
+            ->andWhere('n.exampleField = :val')
             ->setParameter('val', $value)
-            ->orderBy('m.id', 'ASC')
+            ->orderBy('n.id', 'ASC')
             ->setMaxResults(10)
             ->getQuery()
             ->getResult()
@@ -39,8 +39,8 @@ class MessageRepository extends ServiceEntityRepository
     /*
     public function findOneBySomeField($value): ?Message
     {
-        return $this->createQueryBuilder('m')
-            ->andWhere('m.exampleField = :val')
+        return $this->createQueryBuilder('n')
+            ->andWhere('n.exampleField = :val')
             ->setParameter('val', $value)
             ->getQuery()
             ->getOneOrNullResult()
